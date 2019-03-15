@@ -144,6 +144,7 @@ void RETARGET_SerialInit(void)
 
   /* Configure USART for basic async operation */
   init.enable = usartDisable;
+  init.hwFlowControl = usartHwFlowControlCtsAndRts;
   USART_InitAsync(usart, &init);
 
 #if defined(GPIO_USART_ROUTEEN_TXPEN)
